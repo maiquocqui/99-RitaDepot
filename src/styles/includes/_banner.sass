@@ -1,0 +1,91 @@
+.banner-wrap
+	background: url(../img/banner/bg.png) center center repeat
+	.banner
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			width: 281px
+			height: 217px
+			background: url(../img/banner/o1.png) no-repeat
+			+pos(abs, null null 0 0)
+			+transform(translate(-100%,0))
+			+media-breakpoint-down(md)
+				display: none
+		&:after
+			content: ''
+			display: block
+			width: 223px
+			height: 208px
+			background: url(../img/banner/o2.png) no-repeat
+			+pos(abs, null 0 0 null)
+			+transform(translate(100%,0))
+			+media-breakpoint-down(md)
+				display: none
+		&.brand-banner
+			.slick-dots
+				opacity: 0
+		.slick-dots
+			+pos(abs, null null 30px 50%)
+			+transform(translateX(-50%))
+			z-index: 5
+			text-align: right
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: $white
+				cursor: pointer
+				+transition(all,0.5s)
+				&.slick-active
+					background: $red
+				+ li
+					margin-left: 10px
+				button
+					display: none
+		.slick-prev,.slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			opacity: 0
+			text-shadow: 0 3px 10px color-rgba($black,0.5)
+			&:before
+				content: ''
+				+fs(36rem)
+		&:hover
+			.slick-prev, .slick-next
+				opacity: 1
+		.slick-prev
+			left: 30px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 30px
+			&:before
+				content: '\f105'
+		.img
+			img
+				width: 100%
+				+media-breakpoint-up(xl)
+					height: 351px
+		.item
+			+pos(rel,null)
+			overflow: hidden
+			.caption
+				+pos(abs, null 0 60px 50%)
+				z-index: 5
+				+transform(translateX(-50%))
+				text-align: center
+				color: $white
+				font-family: 'Montserrat', sans-serif
+				.title
+					+fs(24rem)
+					font-weight: 800
+				.txt
+					+fs(20rem)
+					font-weight: 300
+			&.slick-current
+

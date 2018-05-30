@@ -1,0 +1,60 @@
+header
+	.search
+		width: 45%
+		.searchwrap
+			.searchbox
+				input
+					width: calc(100% - 0px - 40px)
+.page-feature
+	.feature-list
+		.feature
+			figure
+				figcaption
+					.subscribe
+						.subscribefrm
+							.subscribebutton
+								font-size: 0
+								&:before
+									+fs(16rem)
+						.subscribe
+							padding-left: 0
+footer
+	.thanh-toan
+		ul
+			+media-breakpoint-down(md)
+				display: flex
+				flex-wrap: wrap
+			li
+				display: inline-block
+				margin: 0 2px 5px
+				+media-breakpoint-down(md)
+					width: 33%
+					margin: 0 0 5px
+				+media-breakpoint-down(sm)
+					width: 25%
+					margin: 0 0 8px
+				img
+					display: block
+					border: 1px solid $main
+					+transition(all 0.4s)
+					&:hover
+						border-color: $red
+	.thanh-vien
+		+media-breakpoint-up(xl)
+			margin-left: 50px
+		ul
+			+media-breakpoint-down(md)
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				justify-content: center
+			li
+				display: inline-block
+				margin: 0 2px 5px
+				+media-breakpoint-down(md)
+					width: 48%
+					margin: 0 0 5px
+				+media-breakpoint-down(sm)
+					width: 33%
+				a
+					display: block

@@ -1,0 +1,190 @@
+.page-feature
+	background: url(../img/bg1.jpg) no-repeat center center
+	background-size: cover
+	padding: 40px 0px
+	+media-breakpoint-down(lg)
+		display: none
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	.feature-list
+		.feature
+			border-right: 1px solid darken($white,10%)
+			+media-breakpoint-down(md)
+				border: 0
+			figure
+				display: flex
+				padding: 0px 15px
+				justify-content: center
+				+media-breakpoint-down(sm)
+					display: block
+				+media-breakpoint-down(xs)
+					padding: 15px 3px 0
+				.feature-img
+					display: flex
+					height: 80px
+					align-items: center
+					justify-content: center
+					+media-breakpoint-down(sm)
+						height: 60px
+						margin-bottom: 15px
+					a
+						+ a
+							margin-left: 5px
+					img
+						max-width: 100%
+						max-height: 100%
+				figcaption
+					.feature-des
+						+fs(13rem)
+						padding-left: 35px
+						color: $white
+						+media-breakpoint-down(md)
+							padding-left: 15px
+						+media-breakpoint-down(sm)
+							padding-left: 0
+						p
+							&:last-child
+								margin-top: 25px
+								+media-breakpoint-down(md)
+									margin-top: 0
+					.subscribe
+						padding-left: 35px
+						width: 330px
+						color: $white
+						+fs(13rem)
+						+media-breakpoint-down(md)
+							padding-left: 15px
+							width: 240px
+						+media-breakpoint-down(sm)
+							width: 100%
+							padding-left: 0
+						.module-title
+							margin-bottom: 20px
+						.subscribefrm
+							background: $pink
+							+bor-rad(50px)
+							height: 40px
+							+media-breakpoint-down(md)
+								width: 100%
+								margin-bottom: 15px
+							input
+								width: calc(100% - 39px)
+								float: left
+								background: none
+								border: none
+								padding: 12px 20px
+								color: $white
+								+fs(13rem)
+							.subscribebutton
+								color: $white
+								background: $yellow
+								+transition(all,0.3s)
+								text-transform: uppercase
+								+fs(16rem)
+								width: 35px
+								height: 35px
+								line-height: 35px
+								+bor-rad(50px)
+								margin-top: 2px
+								&:before
+									content: '\e87a'
+									font-family: 'Linearicons-Free'
+								&:hover
+									background: $red
+		.col-sm-6
+			&:last-child
+				.feature
+					border: 0
+footer
+	.title
+		+fs(15rem)
+		font-weight: 700
+		margin-bottom: 15px
+		text-transform: uppercase
+		color: $red
+		+media-breakpoint-down(lg)
+			+fs(13rem)
+		+media-breakpoint-down(xs)
+			line-height: 1.5
+			+fs(12rem)
+			margin-bottom: 10px
+	.footer-top
+		padding: 50px 0
+		+media-breakpoint-down(md)
+			padding: 30px 0px 0
+		+media-breakpoint-down(xs)
+			padding-top: 15px
+		.col-6
+			+media-breakpoint-down(md)
+				margin-bottom: 30px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+		.col-lg-3
+			+media-breakpoint-up(lg)
+				max-width: 20%
+		.footer-col
+			.footer-link
+				a
+					display: block
+					+fs(14rem)
+					line-height: 1.8
+					color: darken($white,40%)
+					&:hover
+						color: $red
+					+media-breakpoint-down(lg)
+						+fs(13rem)
+					+media-breakpoint-down(xs)
+						+fs(12rem)
+			.social
+				+flexbox
+				margin-bottom: 20px
+				a
+					display: block
+					width: 35px
+					height: 35px
+					line-height: 35px
+					text-align: center
+					+bor-rad(50%)
+					background: $yellow
+					+fs(18rem)
+					color: $white
+					+ a
+						margin-left: 10px
+					+media-breakpoint-down(lg)
+						+fs(15rem)
+						width: 30px
+						height: 30px
+						line-height: 30px
+					+media-breakpoint-down(xs)
+						background: none
+						color: $yellow
+					&:hover
+						background: $red
+						color: $white
+	.footer-bottom
+		.col-12
+			+media-breakpoint-down(sm)
+				margin-bottom: 30px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+		.copyright
+			+fs(12rem)
+			color: color-rgba($white,0.8)
+		.payment-method,.member
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				display: block
+				margin-top: 15px
+			+media-breakpoint-down(xs)
+				margin-top: 5px
+	.copyright
+		background: darken($white,5%)
+		margin-top: 30px
+		padding: 25px 0px
+		+fs(13rem)
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+			padding: 15px 0px
+			+fs(12rem)

@@ -1,0 +1,46 @@
+.page-tab
+	margin: 0 0 20px
+	padding: 0
+	background: darken($white,80%)
+	border: none
+	+bor-rad(0)
+	+media-breakpoint-down(lg)
+		display: block
+		text-align: center
+		white-space: nowrap
+		overflow: auto
+	li, .nav-item
+		margin: 0
+		padding: 0
+		background: none
+		border: none
+		+bor-rad(0)
+		+transition(all,0s)
+		+media-breakpoint-down(lg)
+			display: inline-block
+		+ li, + .nav-item
+			margin-left: 10px
+		a, .nav-link
+			+bor-rad(50px)
+			border: none
+			margin: 0
+			padding: 15px 40px
+			+fs(18rem)
+			line-height: 20px
+			font-weight: 300
+			color: darken($white,40%)
+			background: none
+			+transition(all,0.3s)
+			&:hover
+				color: $yellow
+			&.active, &.mPS2id-highlight
+				color: $yellow
+		&.active
+			a, .nav-link
+				color: $yellow
+
+.top-nav
+	padding: 20px 0
+	.home-tab
+		padding: 10px 15px
+		margin: 0

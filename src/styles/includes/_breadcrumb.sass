@@ -1,0 +1,91 @@
+.breadcrumb-wrap
+	+media-breakpoint-down(md)
+		background: darken($white,4%)
+	ol.breadcrumb
+		margin: 0
+		padding: 20px 0
+		background: none
+		+bor-rad(0)
+		+media-breakpoint-down(md)
+			padding: 10px 0px
+		li
+			display: inline-block
+			color: darken($white,40%)
+			+ li
+				&:before
+					content: '\f105'
+					margin: 0px 5px
+			&:last-child
+				a
+					color: $main
+			a
+				+fs(13rem)
+				color: darken($white,40%)
+				+media-breakpoint-down(xs)
+					+fs(12rem)
+				&:hover
+					color: $blue
+	.breadcrumb-img
+		+pos(rel,null)
+		+media-breakpoint-down(md)
+			display: none
+	.pagename
+		+fs(36rem)
+		text-transform: uppercase
+		font-weight: 500
+		color: $white
+		+pos(abs, 0 null 0 0)
+		right: 0
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+.breadcrumb-wrap2
+	+pos(rel,null)
+	.breadcrumb-img
+		+media-breakpoint-down(md)
+			display: none
+	.breadcrumb-content
+		+pos(abs,50% 0 null 0)
+		+transform(translateY(-50%))
+		text-align: center
+		+media-breakpoint-down(md)
+			+pos(static,unset)
+			+transform(none)
+			margin-bottom: 0
+			background: darken($white,4%)
+	ol.breadcrumb
+		margin: 0 0 15px
+		padding: 0
+		background: none
+		+bor-rad(0)
+		text-align: center
+		+media-breakpoint-down(md)
+			margin-bottom: 0
+			text-align: left
+			padding: 10px 0px
+		li
+			display: inline-block
+			color: darken($white,40%)
+			+ li
+				&:before
+					content: '\f105'
+					margin: 0px 5px
+			a
+				+fs(14rem)
+				font-weight: 600
+				color: $white
+				text-transform: uppercase
+				+media-breakpoint-down(md)
+					+fs(13rem)
+					color: darken($white,60%)
+					text-transform: none
+				&:hover
+					color: $blue
+	.pagename
+		+fs(48rem)
+		// text-transform: uppercase
+		font-weight: 100
+		color: $white
+		+media-breakpoint-down(md)
+			display: none
