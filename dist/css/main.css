@@ -6695,7 +6695,7 @@ main.big {
     vertical-align: middle; }
 
 .text-green {
-  color: #007336; }
+  color: #7aca22; }
 
 .text-orange {
   color: #fe651c; }
@@ -7519,8 +7519,8 @@ input[type="reset"] {
       font-size: 0.75rem;
       border-radius: 3px;
       color: #fff;
-      background: #007336;
-      border-color: #007336;
+      background: #7aca22;
+      border-color: #7aca22;
       position: absolute;
       top: 3px;
       left: 0;
@@ -8914,6 +8914,10 @@ footer .copyright {
     .home-adv .adv-list .adv-banner img {
       width: 100%; }
 
+.home-product {
+  background: #fff0f0;
+  padding: 40px 0; }
+
 .cartheader {
   background: #ef3331; }
   .cartheader .btn-headback {
@@ -9142,7 +9146,7 @@ footer .copyright {
       color: #333333; }
     .cartstep .step.finish .number {
       background: #fff;
-      color: #007336;
+      color: #7aca22;
       font-size: 0; }
       .cartstep .step.finish .number:before {
         content: '\f00c';
@@ -10614,8 +10618,8 @@ footer .copyright {
   margin-top: 10px; }
   .payment-success .notice {
     color: #333333;
-    background: #73ffb5;
-    border: 1px solid #00d966;
+    background: #f6fcef;
+    border: 1px solid #ace66c;
     padding: 10px 10px;
     border-radius: 5px;
     position: relative;
@@ -10629,7 +10633,7 @@ footer .copyright {
     .payment-success .notice .fa {
       content: '\f058';
       font-family: 'fontawesome';
-      color: #007336;
+      color: #7aca22;
       font-size: 1.25rem;
       line-height: 1; }
     .payment-success .notice span {
@@ -10638,7 +10642,7 @@ footer .copyright {
       font-weight: 500;
       text-transform: uppercase;
       font-size: 0.875rem;
-      color: #007336;
+      color: #7aca22;
       line-height: 1.5; }
   .payment-success .letter {
     font-size: 0.875rem;
