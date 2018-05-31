@@ -1,3 +1,20 @@
+.home-title
+	+fs(25rem)
+	font-weight: 800
+	color: $red
+	text-transform: uppercase
+	margin-bottom: 30px
+	&:after
+		content: ''
+		display: block
+		width: 50px
+		height: 1px
+		background: $red
+		margin-top: 10px
+	&.text-center
+		&:after
+			margin: 10px auto 0
+
 .home-adv
 	background: $white
 	padding: 20px 0
@@ -7,5 +24,165 @@
 			img
 				width: 100%
 .home-product
-	background: $redbg
+	background: $redbg url(../img/bg.png) center bottom no-repeat
+	background-size: contain
 	padding: 40px 0
+	.product-group
+		margin-bottom: 20px
+		background: $white
+	.title-wrap
+		border-bottom: 1px solid darken($white,10%)
+		+flexbox
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		align-content: center
+		padding: 0px 20px
+		.cate-name
+			+fs(15rem)
+			font-weight: 800
+			text-transform: uppercase
+			line-height: 40px
+		.col-right
+			+flexbox
+			justify-content: flex-end
+			align-items: center
+			align-content: center
+		.cate-link
+			a
+				+fs(13rem)
+				color: darken($white,60%)
+				+ a
+					margin-left: 30px
+				&:hover
+					color: $red
+		.btn-viewmore
+			+fs(13rem)
+			color: $red
+			margin-left: 30px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.product-wrap
+		+flexbox
+		flex-wrap: wrap
+		align-items: flex-start
+		align-content: flex-start
+		padding: 20px
+		.product-adv
+			width: 265px
+			.slick-prev, .slick-next
+				+pos(abs, 50% null null null)
+				z-index: 5
+				+transform(translateY(-50%))
+				+fs(0)
+				background: color-rgba($black,0.5)
+				color: $white
+				width: 25px
+				height: 30px
+				&:before
+					content: ''
+					+fs(16rem)
+			.slick-prev
+				left: 0
+				&:before
+					content: '\f104'
+			.slick-next
+				right: 0
+				&:before
+					content: '\f105'
+			.slick-dots
+				text-align: center
+				+pos(abs, null 0 10px 0)
+				text-align: center
+				li
+					display: inline-block
+					width: 10px
+					height: 10px
+					+bor-rad(50px)
+					background: $white
+					opacity: 0.5
+					+ li
+						margin-left: 10px
+					&.slick-active
+						background: $yellow
+						opacity: 1
+					button
+						display: none
+			.item
+				.adv-img
+					display: block
+					img
+						width: 100%
+		.product-slick-wrap
+			width: calc(100% - 285px)
+			overflow: hidden
+			margin-left: 20px
+			&.fullwidth
+				width: 100%
+				margin-left: 0
+			.product-slick
+			.slick-prev, .slick-next
+				+pos(abs, 50% null null null)
+				z-index: 5
+				+transform(translateY(-50%))
+				+fs(0)
+				color: $main
+				&:before
+					content: ''
+					+fs(18rem)
+			.slick-prev
+				left: 0px
+				&:before
+					content: '\f104'
+			.slick-next
+				right: 0px
+				&:before
+					content: '\f105'
+			.slick-list
+				margin: 0px -10px
+			.item
+				padding: 0px 10px
+	.banner-adv
+		margin-bottom: 20px
+		.banner-adv
+			border-left: 1px solid $white
+
+.home-partner
+	padding: 40px 0
+	.partner-slick
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			z-index: 5
+			+transform(translateY(-50%))
+			+fs(0)
+			background: color-rgba($black,0.3)
+			color: $white
+			width: 25px
+			height: 30px
+			&:before
+				content: ''
+				+fs(16rem)
+		.slick-prev
+			left: 0
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 0
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -10px
+			.item
+				padding: 0px 10px
+				border: none
+				.partner-logo
+					height: 100px
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					border: 1px solid darken($white,10%)
+					img
+						max-width: 80%
+						max-height: 80%
