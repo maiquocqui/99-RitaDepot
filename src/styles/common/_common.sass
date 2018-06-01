@@ -580,7 +580,12 @@ input[type="reset"]
 	.pages
 		display: none
 .pages
-	padding: 20px 0
+	height: 50px
+	background: $white
+	+flexbox
+	justify-content: center
+	align-items: center
+	align-content: center
 	ul.pagination
 		+flexbox
 		justify-content: center
@@ -588,16 +593,17 @@ input[type="reset"]
 			+ li
 				margin-left: 10px
 			a, span
-				width: 36px
-				height: 36px
+				width: 26px
+				height: 26px
 				+flexbox
 				justify-content: center
 				align-items: center
 				color: $main
-				+fs(20rem)
+				+fs(13rem)
 				font-weight: 600
-				background: darken($white,10%)
+				background: none
 				+bor-rad(50px)
 			&.active
 				a, span
 					background: $yellow
+					color: $white

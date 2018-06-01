@@ -239,4 +239,38 @@ $(document).ready(function () {
         dots: false,
         arrows: true
     });
+
+    // about slide
+    $('.about-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '.about-nav'
+    });
+    $('.about-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        asNavFor: '.about-slide',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        vertical: true
+    });
+
+    // FAQ toggle
+    $('.faq .faq-title').click(function () {
+        if ($(this).parent().hasClass('active') == true) {
+            $(this).parent().removeClass('active');
+            $(this).parent().find('.faq-content').slideUp(500);
+        } else {
+            $('.faq').removeClass('active');
+            $('.faq').find('.faq-content').slideUp(500);
+            $(this).parent().addClass('active');
+            $(this).parent().find('.faq-content').slideDown(500);
+        }
+    });
+
+    $(".pagename").append($('.breadcrumb li a').eq(1).find('span').html());
 });

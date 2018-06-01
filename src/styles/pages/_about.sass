@@ -1,0 +1,46 @@
+.about-page
+	margin-bottom: 60px
+	.about-slide-wrap
+		+flexbox
+		flex-wrap: wrap
+		.about-slide
+			width: calc(100% - 134px)
+			.item
+				.img
+					display: block
+					img
+						width: 100%
+						height: 305px
+						object-fit: cover
+		.about-nav
+			width: 130px
+			margin-left: 4px
+			.slick-list
+				margin: -2px 0
+			.item
+				margin: 0
+				padding: 2px 0
+				border: none
+				cursor: pointer
+				img
+					width: 100%
+					filter: brightness(80%)
+					+transition(all,0.5s)
+				&.slick-current
+					img
+						filter: brightness(100%)
+	.about-contact
+		background: $white
+		border: 1px solid darken($white,10%)
+		padding: 40px 50px
+		.title
+			margin-bottom: 20px
+			+fs(13rem)
+			text-transform: uppercase
+			font-weight: 700
+		ul
+			li
+				+fs(13rem)
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0

@@ -1,0 +1,66 @@
+.support-page
+	margin-bottom: 40px
+	.faq-list
+		.faq
+			background: $white
+			margin-bottom: 10px
+			.faq-title
+				+fs(15rem)
+				line-height: 20px
+				padding: 13px 20px
+				+pos(rel,null)
+				cursor: pointer
+				&:before
+					content: '\f059'
+					color: $red
+					margin-right: 5px
+				&:after
+					content: '\f107'
+					+pos(abs, 13px 20px null null)
+			.faq-content
+				display: none
+				border-top: 1px solid darken($white,10%)
+				padding: 13px 40px
+				.content
+					+fs(13rem)
+			&.active
+				.faq-title
+					font-weight: 700
+
+
+.send-mess
+	background: #555555
+	padding: 20px
+	margin-bottom: 40px
+	.module-title
+		+fs(15rem)
+		font-weight: 700
+		color: $white
+		text-transform: uppercase
+		margin-bottom: 10px
+	label
+		display: none
+	.form-group
+		margin-bottom: 5px
+		input, textarea
+			@extend .form-control
+			+fs(14rem)
+			padding: 8px 10px
+			background: $white
+			+bor-rad(0)
+			border: none
+			&:active, &:focus
+				border-color: $red
+				box-shadow: 0 0 0 0.2rem color-rgba($red,0.5)
+	.frm-btn
+		text-align: center
+	input[type="submit"]
+		line-height: 36px
+		padding: 0px 50px
+		background: $amber
+		color: $white
+		text-transform: uppercase
+		+fs(15rem)
+		text-align: center
+		border: none
+
