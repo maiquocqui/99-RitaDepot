@@ -1,42 +1,42 @@
 .breadcrumb-wrap
-	.breadcrumb-content
+.breadcrumb-content
+	+flexbox
+	flex-wrap: wrap
+	margin: 10px 0
+.pagename
+	background: #555555
+	+fs(15rem)
+	color: $white
+	font-weight: 700
+	text-transform: uppercase
+	line-height: 20px
+	padding: 15px 20px
+	width: 280px
+.breadcrumb
+	width: calc(100% - 290px)
+	background: $white
+	+bor-rad(0)
+	border: none
+	margin: 0 0 0 10px
+	padding: 15px 20px
+	li
+		+fs(13rem)
+		line-height: 20px
+		font-weight: 300
+		color: darken($white,40%)
 		+flexbox
-		flex-wrap: wrap
-		margin: 10px 0
-		.pagename
-			background: #555555
-			+fs(15rem)
-			color: $white
-			font-weight: 700
-			text-transform: uppercase
-			line-height: 20px
-			padding: 15px 20px
-			width: 280px
-		.breadcrumb
-			width: calc(100% - 290px)
-			background: $white
-			+bor-rad(0)
-			border: none
-			margin: 0 0 0 10px
-			padding: 15px 20px
-			li
-				+fs(13rem)
-				line-height: 20px
-				font-weight: 300
-				color: darken($white,40%)
-				+flexbox
-				&:after
-					content: '\f101'
-					margin: 0px 5px
-				&:first-child
-					a
-						+fs(0)
-						&:before
-							content: '\f015'
-							+fs(13rem)
-				&:last-child
-					&:after
-						display: none
-				a
-					display: block
-					height: 20px
+		&:after
+			content: '\f101'
+			margin: 0px 5px
+		&:first-child
+			a
+				+fs(0)
+				&:before
+					content: '\f015'
+					+fs(13rem)
+		&:last-child
+			&:after
+				display: none
+		a
+			display: block
+			height: 20px

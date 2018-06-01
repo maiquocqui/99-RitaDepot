@@ -1,2 +1,31 @@
 .contact-system
-	
+	margin-bottom: 10px
+.contact-store
+	background: $white
+	padding: 20px 60px 0
+	margin-bottom: 60px
+	.home-title
+		+fs(15rem)
+		&:after
+			display: none
+	.store-list
+		.store
+			margin-bottom: 30px
+			figure
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				.store-img
+					width: 160px
+					img
+						width: 100%
+				figcaption
+					width: calc(100% - 160px)
+					padding-left: 30px
+					.store-name
+						+fs(15rem)
+						font-weight: 700
+						text-transform: uppercase
+					.store-des
+						+fs(15rem)

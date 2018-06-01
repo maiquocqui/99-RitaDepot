@@ -1,6 +1,11 @@
 .product-col
+	+pos(rel,null)
+	padding: 9px
+	border: 1px solid transparent
+	+transition(all,0.5s)
+	&:hover
+		border: 1px solid $red
 	figure
-		+pos(rel,null)
 		.product-promotion
 			&.sale
 				width: 40px
@@ -66,3 +71,17 @@
 			.product-des
 				+fs(12rem)
 				color: darken($white,40%)
+
+.product-row
+	margin: 0px -5px
+	.col-left
+		padding: 0px 5px
+		width: 290px
+	.col-main
+		padding: 0px 5px
+		width: calc(100% - 290px)
+
+.product-page
+	.product-breadcrumb
+		ol.breadcrumb
+			width: 100%
