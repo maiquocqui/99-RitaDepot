@@ -1,11 +1,10 @@
 .product-col
-	+pos(rel,null)
-	padding: 9px
-	border: 1px solid transparent
-	+transition(all,0.5s)
-	&:hover
-		border: 1px solid $red
+	background: $white
 	figure
+		+pos(rel,null)
+		padding: 14px
+		border: 1px solid transparent
+		+transition(all,0.5s)
 		.product-promotion
 			&.sale
 				width: 40px
@@ -17,7 +16,7 @@
 				line-height: 40px
 				font-weight: 700
 				text-align: center
-				+pos(abs, 0 null null 0)
+				+pos(abs, 15px null null 15px)
 				&:before
 					content: ''
 					display: block
@@ -33,7 +32,7 @@
 				text-transform: uppercase
 				line-height: 20px
 				padding: 0px 5px
-				+pos(abs, 200px 0 null null)
+				+pos(abs, 200px 15px null null)
 				strong
 					+fs(12rem)
 		.product-img
@@ -46,6 +45,7 @@
 				max-width: 100%
 				max-height: 100%
 		figcaption
+			padding-bottom: 15px
 			.product-name
 				+fs(13rem)
 				text-transform: uppercase
@@ -69,8 +69,38 @@
 					font-weight: 800
 					color: $red
 			.product-des
-				+fs(12rem)
+				+fs(11rem)
 				color: darken($white,40%)
+			.product-btn
+				+pos(abs, null -1px 0 -1px)
+				z-index: 10
+				background: $white
+				padding: 0 15px 15px
+				border: 1px solid $red
+				border-top: none
+				opacity: 0
+				visibility: hidden
+				+transition(all,0.5s)
+				.btn-buy
+					+fs(15rem)
+					font-weight: 700
+					text-transform: uppercase
+					color: $white
+					background: $red
+					text-align: center
+					line-height: 36px
+					display: block
+					&:hover
+						background: lighten($red,10%)
+	&:hover
+		figure
+			border: 1px solid $red
+			border-bottom-color: transparent
+			figcaption
+				.product-btn
+					opacity: 1
+					visibility: visible
+					+transform(translateY(30px))
 
 .product-row
 	margin: 0px -5px
@@ -82,6 +112,254 @@
 		width: calc(100% - 290px)
 
 .product-page
+	margin-top: 10px
+	+ .pages, .pages
+		margin-bottom: 40px
+	.pagename
+		background: none
+		+fs(15rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $main
+		width: 100%
+		background: $white
+		padding: 0 20px 15px
+		margin-bottom: 1px
 	.product-breadcrumb
 		ol.breadcrumb
 			width: 100%
+			margin: 0
+			padding-bottom: 10px
+	.product-sort-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		background: $white
+		padding: 0px 20px 6px
+		margin-bottom: 1px
+		.product-sort
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			label
+				font-weight: 700
+			.option
+				+flexbox
+				align-items: center
+				align-content: center
+				li
+					margin-left: 10px
+					a
+						padding-left: 15px
+						+pos(rel,null)
+						display: block
+						&:before
+							content: ''
+							width: 12px
+							height: 12px
+							+bor-rad(50px)
+							background: $white
+							border: 2px solid darken($white,20%)
+							+pos(abs, 7px null null 0)
+						&:after
+							content: ''
+							display: block
+							width: 8px
+							height: 8px
+							+bor-rad(50px)
+							+pos(abs, 9px null null 2px)
+							background: $red
+							border: 1px solid $white
+							opacity: 0
+						&.active
+							&:before
+								content: ''
+								border-color: $red
+								background: $red
+							&:after
+								opacity: 1
+		.product-show
+			+fs(13rem)
+			font-weight: 300
+			+flexbox
+			align-items: center
+			align-content: center
+			select
+				+bor-rad(3px)
+				border: 1px solid darken($white,10%)
+				margin: 0px 10px
+				padding: 5px 5px
+	.product-list
+		.product-col
+			margin-bottom: 20px
+
+.product-detail
+	background: $white
+	padding: 20px 20px 40px
+	margin-bottom: 20px
+	.product-slide-wrap
+		.product-slide
+			.item
+				.img
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					height: 340px
+					img
+						max-width: 80%
+						max-height: 80%
+		.product-nav
+			width: 230px
+			margin: 0 auto
+			.slick-list
+				margin: 0px -5px
+			.item
+				padding: 0px -5px
+				border: none
+				cursor: pointer
+				.img
+					border: 1px solid darken($white,10%)
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					width: 70px
+					height: 70px
+					img
+						max-width: 80%
+						max-height: 80%
+				&.slick-current
+					.img
+						border-color: $red
+	.product-info
+		.product-name-wrap
+			border-bottom: 1px solid darken($white,10%)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			padding-bottom: 10px
+		.product-name
+			+fs(24rem)
+			font-weight: 700
+		.product-rating
+			+flexbox
+			align-items: center
+			align-content: center
+			.br-theme-fontawesome-stars 
+				.br-widget 
+					a
+						+fs(16rem)
+						&.br-selected
+							&:after
+								color: $amber
+			label
+				margin-left: 10px
+				+fs(13rem)
+				line-height: 1
+				color: darken($white,40%)
+		.product-price
+			+flexbox
+			align-items: flex-end
+			align-content: flex-end
+			padding: 20px 0
+			border-bottom: 1px solid darken($white,10%)
+			label
+				+fs(15rem)
+				font-weight: 700
+				margin-right: 10px
+				line-height: 1
+			.new
+				+fs(20rem)
+				font-weight: 800
+				color: $red
+				line-height: 1
+			.old
+				+fs(13rem)
+				font-weight: 300
+				color: darken($white,40%)
+				line-height: 1
+				text-decoration: line-through
+				margin-left: 10px
+		.product-download
+			+flexbox
+			align-items: flex-end
+			align-content: flex-end
+			padding: 20px 0
+			border-bottom: 1px solid darken($white,10%)
+			label
+				+fs(15rem)
+				font-weight: 700
+				margin-right: 10px
+				line-height: 1
+			.btn-download
+				+fs(14rem)
+				line-height: 1
+				&:before
+					content: '\f019'
+					+fs(15rem)
+					color: $red
+					margin-right: 5px
+		.product-order
+			+flexbox
+			align-items: center
+			align-content: center
+			padding: 20px 0
+			// border-bottom: 1px solid darken($white,10%)
+			.number
+				+flexbox
+				align-items: center
+				align-content: center
+				margin-right: 10px
+				label
+					+fs(15rem)
+					font-weight: 700
+				input
+					+bor-rad(3px)
+					border: 1px solid darken($white,10%)
+					line-height: 1
+					padding: 5px 0
+					text-align: center
+					width: 40px
+					margin-left: 10px
+			.btn-buy, .btn-tragop
+				+fs(15rem)
+				font-weight: 700
+				text-transform: uppercase
+				color: $white
+				line-height: 36px
+				padding: 0px 25px
+				margin-right: 10px
+			.btn-buy
+				background: $red
+			.btn-tragop
+				background: $yellow
+		.product-gift
+			padding: 20px 0
+			border-bottom: 1px solid darken($white,10%)
+			label
+				+fs(13rem)
+				display: block
+				margin-bottom: 20px
+				&:before
+					content: '\f058'
+					color: $lgreen
+					margin-right: 5px
+			.gift-list
+				+flexbox
+				flex-wrap: wrap
+				.gift
+					+flexbox
+					width: 90px
+					height: 90px
+					justify-content: center
+					align-items: center
+					align-content: center
+					border: 1px solid darken($white,10%)
+					margin-right: 10px
+					img
+						max-width: 90%
+						max-height: 90%

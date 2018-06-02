@@ -273,4 +273,32 @@ $(document).ready(function () {
     });
 
     $(".pagename").append($('.breadcrumb li a').eq(1).find('span').html());
+
+    // product slide
+    $('.product-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '.product-nav'
+    });
+    $('.product-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-slide',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true
+    });
+
+    // Rating
+    $('#bar-rating').barrating({
+        theme: 'fontawesome-stars'
+    });
+
+    // responsive tab 
+    $('#responsivetabs').responsiveTabs({
+        startCollapsed: 'accordion'
+    });
 });
