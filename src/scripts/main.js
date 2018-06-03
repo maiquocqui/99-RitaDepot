@@ -220,6 +220,25 @@ $(document).ready(function() {
         speed: 500,
         dots: false,
         arrows: true,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     });
 
     $('.product-slick-wide').slick({
@@ -228,6 +247,25 @@ $(document).ready(function() {
         speed: 500,
         dots: false,
         arrows: true,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     });
 
     $('.partner-slick').slick({
@@ -236,6 +274,25 @@ $(document).ready(function() {
         speed: 500,
         dots: false,
         arrows: true,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }
+        ]
     });
 
     // about slide
